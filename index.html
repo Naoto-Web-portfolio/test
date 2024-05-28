@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ポートフォリオサイト</title>
+    <title>なおバドのポートフォリオ</title>
     <style>
+        @font-face {
+            font-family: 'SoukouMincho';
+            src: url('fonts/SoukouMincho.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'meiryo';
+            src: url('fonts/meiryo.ttc') format('truetype');
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'SoukouMincho', Arial, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
         }
 
         header {
-            background: #333;
-            color: #fff;
-            padding: 1rem 0;
+            background: #00e5ff;
+            color: #000000;
+            padding: 0.2rem 0;
             text-align: center;
         }
+
+        h1 {
+    font-size : 40px; 
+    line-height : 1;    
+}
+ 
+h2 {
+    font-size : 30px;
+    line-height : 1.3333;   
+}
+h3 {
+    font-size : 30px;
+    line-height : 1;    
+}
 
         nav ul {
             list-style: none;
@@ -39,17 +63,47 @@
         }
 
         section {
+            display: none;
             padding: 2rem;
         }
 
+        #profile {
+            font-family: 'meiryo', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+        }
+
+        #profile img {
+            border-radius: 30%;
+            width: 150px;
+            height: 150px;
+            margin-right: 2rem;
+        }
+
         footer {
-            background: #333;
-            color: #fff;
+            background: #00ccff;
+            color: #000000;
             text-align: center;
-            padding: 1rem 0;
+            padding: 0.5rem 0;
             position: fixed;
             bottom: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .copyright {
+            margin-left: auto;
+            padding-right: 3rem;
+        }
+
+        .social-icons img {
+            width: 42px;
+            height: 42px;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            cursor: pointer;
         }
 
         @media (max-width: 600px) {
@@ -58,106 +112,162 @@
                 text-align: center;
                 margin: 0.5rem 0;
             }
+
+            #profile {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            #profile img {
+                margin: 0 0 1rem 0;
+            }
         }
     </style>
 </head>
+
 <body>
     <header>
-        <h1>私のポートフォリオ</h1>
+        <h1>なおバドのポートフォリオ</h1>
         <nav>
             <ul>
-                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#profile">プロフィール</a></li>
                 <li><a href="#projects">プロジェクト</a></li>
-                <li><a href="#contact">連絡先</a></li>
+                <li><a href="#contact">コンタクトリスト</a></li>
             </ul>
         </nav>
     </header>
-    <section id="about">
-        <h2>自己紹介</h2>
-        <p>ここに自己紹介文を入力します。</p>
+
+    <section id="home" style="display: block;">
+        <h1>ホーム</h1>
+        <h2>サイトの概要</h2>
+        <p>なおバドのポートフォリオでは、なおバドが作成した作品を載せています。<br>基本ChatGPTを使って制作しており理解しながら使用して作品作りを行っています。</p>
+        <p></p>
+        <p>Web制作は初心者ですのでこのページは技術が上がるたび更新していき、少しづつ理想に近づけていこうと考えています。</p>
+        <h2>目標到達地点</h2>
+        <p>・Web開発する上での知識・技術を向上させる</p>
+        <p>・このポートフォリオを思い描く理想のサイトにする</p>
+        <p>・このサイトを土台に色々なWeb制作に取り組み成果を作ること</p>
+        <h2>将来の目標</h2>
+        <p>・人を楽しませるサイトを作る</p>
+        <p>・動的なアニメーションが付いたサイトを作る</p>
+        <p>・Webを通したデータ管理や企業に役立つようなサイトを作る</p>
+        <p><br><br><br><br><br></p>
     </section>
+
+    <section id="profile">
+        <img src="images/プロフィール写真.jpg" alt="プロフィール写真">
+        <h1>自己紹介</h1>
+        <h2>なおバドのプロフィール</h2>
+        <p>◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢</p>
+        <p>名前:南雲 直人(なぐもなおと)</p>
+        <p>経歴:藤沢工科高等学校卒 → 神奈川工科大学情報メディア学科2年</p>
+        <p>所属部活・サークル:バドミントン部  副代表・広報</p>
+        <p>◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢</p>
+    </section>
+
     <section id="projects">
-        <h2>プロジェクト</h2>
-        <ul>
-            <!-- JavaScriptで動的に追加 -->
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>連絡先</h2>
-        <form id="contact-form">
-            <label for="name">名前:</label>
-            <input type="text" id="name" name="name" required aria-label="名前">
-            <label for="email">メール:</label>
-            <input type="email" id="email" name="email" required aria-label="メール">
-            <label for="message">メッセージ:</label>
-            <textarea id="message" name="message" required aria-label="メッセージ"></textarea>
-            <button type="submit">送信</button>
-        </form>
-        <p id="form-status"></p>
-    </section>
-    <footer>
-        <p>&copy; 2024 私のポートフォリオ</p>
-    </footer>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // プロジェクトのリストを動的に追加
-            const projects = [
-                'プロジェクト1: ここに説明を追加します。',
-                'プロジェクト2: ここに説明を追加します。',
-                'プロジェクト3: ここに説明を追加します。'
-            ];
+        <h1>プロジェクト
+            <h2>作品集</h2>
+            <ul>
+                <!-- JavaScriptで動的に追加 -->
+            </ul>
+        </section>
+        <section id="contact">
+            <h1>コンタクトリスト<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_LeCHTR7XgtjDdOgrkquWqqmcU4Gh9VLEMlrJDo5MiLrrkw/viewform?usp=sf_link" width="640" height="1080" frameborder="0" marginheight="0" marginwidth="0" style="float: right; width: 50%;">読み込んでいます…</iframe></h1>
+            <h2>SNS</h2>
+            <h3>インスタグラム　X(旧Twitter)</h3>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/na2co3_naoto.badminton/" target="_blank">
+                    <img src="images/Instagram_logo.png" alt="Instagram">
+                </a>
+                
+                <a href="https://x.com/na2co3_naobad" target="_blank">
+                    <img src="images/X_logo.png" alt="X">
+                </a>
+            </div>
+        </section>
 
-            const projectsList = document.querySelector('#projects ul');
-            projectsList.innerHTML = '';
+        <footer>
+            <div class="copyright">
+                <p>&copy;     なおバドのポートフォリオ</p>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/na2co3_naoto.badminton/" target="_blank">
+                    <img src="images/Instagram_logo.png" alt="Instagram">
+                </a>
+                <a href="https://x.com/na2co3_naobad" target="_blank">
+                    <img src="images/X_logo.png" alt="X">
+                </a>
+            </div>
+            <div>
+            </div>
+        </footer>
 
-            projects.forEach(project => {
-                const li = document.createElement('li');
-                li.textContent = project;
-                projectsList.appendChild(li);
-            });
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const sections = document.querySelectorAll('section');
+                const navLinks = document.querySelectorAll('nav ul li a');
 
-            // ナビゲーションメニューの動的ハイライト
-            const sections = document.querySelectorAll('section');
-            const navLi = document.querySelectorAll('nav ul li a');
-
-            window.onscroll = () => {
-                let current = '';
-
+                // 初期表示はホームを表示し、他のセクションを非表示にする
                 sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    if (scrollY >= sectionTop - 60) {
-                        current = section.getAttribute('id');
+                    if (section.getAttribute('id') !== 'home') {
+                        section.style.display = 'none';
                     }
                 });
 
-                navLi.forEach(li => {
-                    li.classList.remove('active');
-                    if (li.getAttribute('href') === `#${current}`) {
-                        li.classList.add('active');
-                    }
+                document.getElementById('home').style.display = 'block';
+
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href').substring(1); // リンク先のセクションIDを取得
+                        sections.forEach(section => {
+                            if (section.getAttribute('id') === targetId) {
+                                section.style.display = 'block'; // 対象のセクションを表示
+                            } else {
+                                section.style.display = 'none'; // それ以外のセクションを非表示
+                            }
+                        });
+                    });
                 });
-            };
-
-            // フォームのバリデーション
-            const form = document.getElementById('contact-form');
-            const status = document.getElementById('form-status');
-
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
-                const name = form.name.value.trim();
-                const email = form.email.value.trim();
-                const message = form.message.value.trim();
-
-                if (name === '' || email === '' || message === '') {
-                    status.textContent = '全てのフィールドを入力してください。';
-                    status.style.color = 'red';
-                } else {
-                    status.textContent = '送信しました。ありがとうございます！';
-                    status.style.color = 'green';
-                    form.reset();
-                }
+                // プロジェクトのリストを動的に追加
+                const projects = [
+                    'プロジェクト1: ここに説明を追加します。',
+                    'プロジェクト2: ここに説明を追加します。',
+                    'プロジェクト3: ここに説明を追加します。'
+                ];
+    
+                const projectsList = document.querySelector('#projects ul');
+                projectsList.innerHTML = '';
+    
+                projects.forEach(project => {
+                    const li = document.createElement('li');
+                    li.textContent = project;
+                    projectsList.appendChild(li);
+                });
+    
+                // ナビゲーションメニューの動的ハイライト
+                window.onscroll = () => {
+                    let current = '';
+    
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        if (scrollY >= sectionTop - 60) {
+                            current = section.getAttribute('id');
+                        }
+                    });
+    
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${current}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                };
             });
-        });
-    </script>
-</body>
-</html>
+        </script>
+    </body>
+    
+    </html>
+    
